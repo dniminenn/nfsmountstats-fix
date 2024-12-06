@@ -96,7 +96,6 @@ func (m *Mountstats) Parse(text string) error {
 
 		device, err := NewMountDevice(reconstructed)
 		if err != nil {
-			fmt.Printf("Error parsing device at index %d: %v\n", idx, err)
 			return fmt.Errorf("couldn't construct new MountDevice: %v", err)
 		}
 
